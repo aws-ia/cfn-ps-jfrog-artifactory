@@ -1,10 +1,17 @@
-This guide covers the information you need to deploy the {partner-product-name} Partner Solution in the AWS Cloud.
+This Partner Solution deploys https://jfrog.com/artifactory/[JFrog Artifactory]—and, optionally, https://jfrog.com/xray/[JFrog Xray]—in the Amazon Web Services (AWS) Cloud. If you are unfamiliar with AWS Partner Solutions we recommend that you read the https://aws-ia.github.io/content/qs_info.html[AWS Partner Solution General Content Guide].
 
-// Fill in the info in <angle brackets> for use on the landing page only: 
-This Amazon Web Services (AWS) Partner Solution deploys [<product name>](<partner's marketing product page>) in the AWS Cloud so that <purpose>. This solution is for <target users> who want to <do what> so that <why>. For more information, refer to the [<product name> documentation](<URL>).
+This deployment guide covers the steps necessary to deploy the Partner Solution. For more advanced information on the product, troubleshooting, or additional functionality, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/operational/index.html[Operational guide].
 
-// Deploying this solution does not guarantee an organization’s compliance with any laws, certifications, policies, or other regulations. [Uncomment this statement only for solutions that relate to compliance. We'll add the corresponding reference part to the landing page and get legal approval before publishing.]
+// For information on using this Partner Solution for migrations, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/migration/index.html[Migration guide].
 
-// For advanced information about the product, troubleshooting, or additional functionality, refer to the https://{partner-solution-github-org}.github.io/{partner-solution-project-name}/operational/index.html[Operational Guide^].
+The default installation creates two https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html[Amazon EC2 Auto Scaling^] groups:
 
-// For information about using this Partner Solution for migrations, refer to the https://{partner-solution-github-org}.github.io/{partner-solution-project-name}/migration/index.html[Migration Guide^].
+* The first Auto Scaling group ensures that the `node.id` for high availability (HA) is set to `primary` and that there is always only one primary node.
+* The second Auto Scaling group ensures that the `node.id` for the secondary nodes is unique and sets this `node.id` to the hostname. This Auto Scaling group scales up or down the number of secondary nodes to the amount specified by the administrator.
+
+The optional JFrog Xray installation creates two additional Amazon EC2 Auto Scaling groups:
+
+* The first Auto Scaling group is responsible for the primary node. JFrog Xray is installed into the primary subnet. 
+* The second Auto Scaling group installs JFrog Xray into the secondary subnet. This Auto Scaling group scales up or down the number of secondary nodes to the amount specified by the administrator.
+
+The Network Load Balancer monitors the Auto Scaling groups and is configured with https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html[health checks^] that validate that the JFrog Artifactory service is up and running. If the endpoint returns an error response, a new node is recovered within 10 minutes.
