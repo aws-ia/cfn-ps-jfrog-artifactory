@@ -71,7 +71,7 @@ Parameters:
     Type: String
 
 # To populate additional mappings use following link
-# https://raw.githubusercontent.com/aws-quickstart/quickstart-linux-bastion/master/templates/linux-bastion.template
+# https://raw.githubusercontent.com/aws-ia/quickstart-linux-bastion/master/templates/linux-bastion.template
 # link from centos: https://www.centos.org/download/aws-images/
 Mappings:
   AWSAMIRegionMap:

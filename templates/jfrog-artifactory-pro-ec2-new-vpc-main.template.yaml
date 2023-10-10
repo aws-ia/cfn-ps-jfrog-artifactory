@@ -104,7 +104,7 @@ Parameters:
     ConstraintDescription:
       Quick Start bucket name can include numbers, lowercase
       letters, and hyphens (-). It cannot start or end with a hyphen (-).
-    Default: aws-quickstart
+    Default: aws-ia
     Type: String
   QsS3KeyPrefix:
     Description:
@@ -115,7 +115,7 @@ Parameters:
     ConstraintDescription:
       Quick Start key prefix can include numbers, lowercase letters,
       uppercase letters, hyphens (-), and forward slash (/).
-    Default: quickstart-jfrog-artifactory/
+    Default: cfn-ps-jfrog-artifactory-on-ec2/
     Type: String
   QsS3BucketRegion:
     Default: "us-east-1"
@@ -266,7 +266,7 @@ Parameters:
     Default: c5.2xlarge
     Type: String
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-quickstart"]
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-ia"]
 Resources:
   ArtifactoryNewVpcStack:
     Type: AWS::CloudFormation::Stack
