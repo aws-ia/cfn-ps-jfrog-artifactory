@@ -1,7 +1,6 @@
 project:
   name: cfn-ps-jfrog-artifactory
-  owner: quickstart-eng@amazon.com
-  s3_object_acl: private
+  owner: aws-ia@amazon.com
   s3_regional_buckets: true
   shorten_stack_name: true
   regions:
@@ -24,7 +23,7 @@ project:
     XrayVersion: 3.46.0
     AccessCidr: "10.0.0.0/0"
     QsS3BucketName: "$[taskcat_autobucket]"
-    QsS3KeyPrefix: "quickstart-jfrog-artifactory/"
+    QsS3KeyPrefix: "cfn-ps-jfrog-artifactory/"
     QsS3BucketRegion: "$[taskcat_current_region]"
 tests:
   jfrog-artifactory-ec2-xray:

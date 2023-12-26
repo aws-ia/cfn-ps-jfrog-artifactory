@@ -1,0 +1,300 @@
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [ArtifactoryExistingVpcStack].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                       ResourceStatusReason
+--------------------------------  ------------------  --------------------------  --------------------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2023-12-26 15:15:10.919000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d  The following resource(s) failed to create: [ArtifactoryExistingVpcStack].
+2023-12-26 15:15:10.290000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  ArtifactoryExistingVpcStack             Embedded stack arn:aws:cloudformation:us-west-2:037498179568:stack/tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-YPMG0ZIB0FSK/49b39d40-a3ff-11ee-8a65-021b30065e59 was not successfully created: The following resource(s) failed to create: [ArtifactoryPrimary].
+2023-12-26 14:58:54.720000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ArtifactoryExistingVpcStack             Resource creation Initiated
+2023-12-26 14:58:53.916000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ArtifactoryExistingVpcStack
+2023-12-26 14:58:53.264000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  ArtifactoryVpcStack
+2023-12-26 14:55:22.438000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ArtifactoryVpcStack                     Resource creation Initiated
+2023-12-26 14:55:21.649000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ArtifactoryVpcStack
+2023-12-26 14:55:18.700000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryVpcStack-14XNLWBP7AT1F
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                           LogicalResourceId                                                         ResourceStatusReason
+--------------------------------  ------------------  -------------------------------------  ------------------------------------------------------------------------  ---------------------------
+2023-12-26 14:58:39.268000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryVpcStack-14XNLWBP7AT1F
+2023-12-26 14:58:36.239000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        PrivateSubnet1ARoute
+2023-12-26 14:58:35.938000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PrivateSubnet1ARoute                                                      Resource creation Initiated
+2023-12-26 14:58:34.293000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PrivateSubnet1ARoute
+2023-12-26 14:58:33.408000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway1
+2023-12-26 14:58:03.397000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        PrivateSubnet2ARoute
+2023-12-26 14:58:03.057000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PrivateSubnet2ARoute                                                      Resource creation Initiated
+2023-12-26 14:58:01.316000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PrivateSubnet2ARoute
+2023-12-26 14:58:00.634000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway2
+2023-12-26 14:56:36.829000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1                                                               Resource creation Initiated
+2023-12-26 14:56:36.038000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway2                                                               Resource creation Initiated
+2023-12-26 14:56:35.525000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1
+2023-12-26 14:56:34.787000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway2
+2023-12-26 14:56:34.198000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NAT1EIP
+2023-12-26 14:56:33.789000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NAT2EIP
+2023-12-26 14:56:24.102000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet1ARouteTableAssociation
+2023-12-26 14:56:18.526000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NAT1EIP                                                                   Resource creation Initiated
+2023-12-26 14:56:18.496000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        PublicSubnetRoute
+2023-12-26 14:56:18.242000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PublicSubnetRoute                                                         Resource creation Initiated
+2023-12-26 14:56:18.167000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NAT2EIP                                                                   Resource creation Initiated
+2023-12-26 14:56:17.048000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        PublicSubnetRoute
+2023-12-26 14:56:17.041000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NAT2EIP
+2023-12-26 14:56:16.994000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NAT1EIP
+2023-12-26 14:56:16.339000+00:00  CREATE_COMPLETE     AWS::EC2::VPCGatewayAttachment         VPCGatewayAttachment
+2023-12-26 14:56:03.230000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  PublicSubnet1RouteTableAssociation
+2023-12-26 14:55:56.633000+00:00  CREATE_COMPLETE     AWS::EC2::VPCEndpoint                  S3VPCEndpoint
+2023-12-26 14:55:53.656000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCEndpoint                  S3VPCEndpoint                                                             Resource creation Initiated
+2023-12-26 14:55:53.255000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet2ARouteTableAssociation
+2023-12-26 14:55:53.213000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  PublicSubnet2RouteTableAssociation
+2023-12-26 14:55:53.063000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet1ARouteTableAssociation                                      Resource creation Initiated
+2023-12-26 14:55:52.927000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet2ARouteTableAssociation                                      Resource creation Initiated
+2023-12-26 14:55:52.845000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PublicSubnet2RouteTableAssociation                                        Resource creation Initiated
+2023-12-26 14:55:52.522000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PublicSubnet1RouteTableAssociation                                        Resource creation Initiated
+2023-12-26 14:55:51.728000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet1ARouteTableAssociation
+2023-12-26 14:55:51.663000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCEndpoint                  S3VPCEndpoint
+2023-12-26 14:55:51.455000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PrivateSubnet2ARouteTableAssociation
+2023-12-26 14:55:51.314000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PublicSubnet2RouteTableAssociation
+2023-12-26 14:55:51.203000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  PublicSubnet1RouteTableAssociation
+2023-12-26 14:55:50.878000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   PrivateSubnet1ARouteTable
+2023-12-26 14:55:50.741000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   PrivateSubnet2ARouteTable
+2023-12-26 14:55:50.595000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   PublicSubnetRouteTable
+2023-12-26 14:55:44.471000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         VPCGatewayAttachment                                                      Resource creation Initiated
+2023-12-26 14:55:43.380000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         VPCGatewayAttachment
+2023-12-26 14:55:43.228000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       PrivateSubnet1A
+2023-12-26 14:55:43.223000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       PublicSubnet2
+2023-12-26 14:55:43.161000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       PublicSubnet1
+2023-12-26 14:55:42.933000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       PrivateSubnet2A
+2023-12-26 14:55:42.660000+00:00  CREATE_COMPLETE     AWS::EC2::InternetGateway              InternetGateway
+2023-12-26 14:55:40.776000+00:00  CREATE_COMPLETE     AWS::EC2::VPCDHCPOptionsAssociation    VPCDHCPOptionsAssociation
+2023-12-26 14:55:40.480000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PrivateSubnet1A                                                           Resource creation Initiated
+2023-12-26 14:55:40.416000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation    VPCDHCPOptionsAssociation                                                 Resource creation Initiated
+2023-12-26 14:55:40.392000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PublicSubnet2                                                             Resource creation Initiated
+2023-12-26 14:55:40.323000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PrivateSubnet2A                                                           Resource creation Initiated
+2023-12-26 14:55:40.322000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PrivateSubnet1ARouteTable                                                 Resource creation Initiated
+2023-12-26 14:55:40.255000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PrivateSubnet2ARouteTable                                                 Resource creation Initiated
+2023-12-26 14:55:40.243000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PublicSubnet1                                                             Resource creation Initiated
+2023-12-26 14:55:40.060000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PublicSubnetRouteTable                                                    Resource creation Initiated
+2023-12-26 14:55:39.145000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PublicSubnet2
+2023-12-26 14:55:39.108000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PrivateSubnet1A
+2023-12-26 14:55:39.085000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation    VPCDHCPOptionsAssociation
+2023-12-26 14:55:39.080000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PrivateSubnet2A
+2023-12-26 14:55:39.079000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PrivateSubnet2ARouteTable
+2023-12-26 14:55:39.071000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       PublicSubnet1
+2023-12-26 14:55:39.026000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PrivateSubnet1ARouteTable
+2023-12-26 14:55:39.008000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   PublicSubnetRouteTable
+2023-12-26 14:55:38.337000+00:00  CREATE_COMPLETE     AWS::EC2::VPC                          VPC
+2023-12-26 14:55:32.906000+00:00  CREATE_COMPLETE     AWS::EC2::DHCPOptions                  DHCPOptions
+2023-12-26 14:55:27.411000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC                                                                       Resource creation Initiated
+2023-12-26 14:55:27.397000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                  DHCPOptions                                                               Resource creation Initiated
+2023-12-26 14:55:27.195000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway                                                           Resource creation Initiated
+2023-12-26 14:55:26.183000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway
+2023-12-26 14:55:26.133000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC
+2023-12-26 14:55:26.103000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                  DHCPOptions
+2023-12-26 14:55:22.246000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryVpcStack-14XNLWBP7AT1F  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-YPMG0ZIB0FSK
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [ArtifactoryPrimary].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                               LogicalResourceId                                                                ResourceStatusReason
+--------------------------------  ------------------  -----------------------------------------  -------------------------------------------------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2023-12-26 15:14:08.444000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack                 tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-YPMG0ZIB0FSK  The following resource(s) failed to create: [ArtifactoryPrimary].
+2023-12-26 15:14:07.006000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack                 ArtifactoryPrimary                                                               Embedded stack arn:aws:cloudformation:us-west-2:037498179568:stack/tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X/6346a200-a401-11ee-b485-0a36960c2d65 was not successfully created: The following resource(s) failed to create: [ArtifactoryLaunchConfiguration].
+2023-12-26 15:13:56.603000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                 ArtifactoryPrimary                                                               Resource creation Initiated
+2023-12-26 15:13:55.684000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                 ArtifactoryPrimary
+2023-12-26 15:13:54.922000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack                 ArtifactoryCoreInfraStack
+2023-12-26 15:01:33.648000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::Listener      ArtifactoryInternalElbListener
+2023-12-26 15:01:33.540000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::Listener      ArtifactorySslElbListener
+2023-12-26 15:01:33.312000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::Listener      ArtifactoryInternalElbListener                                                   Resource creation Initiated
+2023-12-26 15:01:33.236000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::Listener      ArtifactorySslElbListener                                                        Resource creation Initiated
+2023-12-26 15:01:32.088000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::Listener      ArtifactorySslElbListener
+2023-12-26 15:01:31.963000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::Listener      ArtifactoryInternalElbListener
+2023-12-26 15:01:31.429000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryElb
+2023-12-26 15:01:31.279000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryInternalElb
+2023-12-26 15:01:29.869000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                  XrayHostProfile
+2023-12-26 15:01:29.576000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                  ArtifactoryHostProfile
+2023-12-26 14:59:17.761000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                  XrayHostProfile                                                                  Resource creation Initiated
+2023-12-26 14:59:17.611000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                  ArtifactoryHostProfile                                                           Resource creation Initiated
+2023-12-26 14:59:17.449000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                 ArtifactoryCoreInfraStack                                                        Resource creation Initiated
+2023-12-26 14:59:16.655000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                  XrayHostProfile
+2023-12-26 14:59:16.615000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                 ArtifactoryCoreInfraStack
+2023-12-26 14:59:16.582000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                  ArtifactoryHostProfile
+2023-12-26 14:59:16.057000+00:00  CREATE_COMPLETE     AWS::IAM::Role                             XrayHostRole
+2023-12-26 14:59:15.953000+00:00  CREATE_COMPLETE     AWS::IAM::Role                             ArtifactoryHostRole
+2023-12-26 14:59:15.169000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactorySslTargetGroup
+2023-12-26 14:59:15.086000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryInternalTargetGroup
+2023-12-26 14:59:15.025000+00:00  CREATE_COMPLETE     AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryTargetGroup
+2023-12-26 14:59:05.376000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup                    ArtifactoryEc2Sg
+2023-12-26 14:59:02.864000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                    ArtifactoryEc2Sg                                                                 Resource creation Initiated
+2023-12-26 14:58:59.812000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryElb                                                                   Resource creation Initiated
+2023-12-26 14:58:59.711000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryInternalElb                                                           Resource creation Initiated
+2023-12-26 14:58:59.709000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                             XrayHostRole                                                                     Resource creation Initiated
+2023-12-26 14:58:59.656000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactorySslTargetGroup                                                        Resource creation Initiated
+2023-12-26 14:58:59.648000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                             ArtifactoryHostRole                                                              Resource creation Initiated
+2023-12-26 14:58:59.585000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryInternalTargetGroup                                                   Resource creation Initiated
+2023-12-26 14:58:59.537000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryTargetGroup                                                           Resource creation Initiated
+2023-12-26 14:58:58.189000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                             ArtifactoryHostRole
+2023-12-26 14:58:58.183000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryInternalTargetGroup
+2023-12-26 14:58:58.169000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryInternalElb
+2023-12-26 14:58:58.166000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::LoadBalancer  ArtifactoryElb
+2023-12-26 14:58:58.162000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                    ArtifactoryEc2Sg
+2023-12-26 14:58:58.161000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                             XrayHostRole
+2023-12-26 14:58:58.160000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactorySslTargetGroup
+2023-12-26 14:58:58.147000+00:00  CREATE_IN_PROGRESS  AWS::ElasticLoadBalancingV2::TargetGroup   ArtifactoryTargetGroup
+2023-12-26 14:58:54.496000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                 tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-YPMG0ZIB0FSK  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                                                                                    ResourceStatusReason
+--------------------------------  ------------------  --------------------------  ---------------------------------------------------------------------------------------------------  ---------------------------
+2023-12-26 15:12:41.021000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R
+2023-12-26 15:12:35.706000+00:00  CREATE_COMPLETE     AWS::RDS::DBInstance        ArtifactoryDatabase
+2023-12-26 15:00:45.608000+00:00  CREATE_COMPLETE     AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1
+2023-12-26 15:00:45.562000+00:00  CREATE_COMPLETE     AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2
+2023-12-26 15:00:08.056000+00:00  CREATE_COMPLETE     AWS::IAM::Policy            ArtifactoryS3IAMPolicy
+2023-12-26 14:59:52.338000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Policy            ArtifactoryS3IAMPolicy                                                                               Resource creation Initiated
+2023-12-26 14:59:50.973000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Policy            ArtifactoryS3IAMPolicy
+2023-12-26 14:59:48.696000+00:00  CREATE_COMPLETE     AWS::S3::Bucket             ArtifactoryS3Bucket
+2023-12-26 14:59:32.066000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBInstance        ArtifactoryDatabase                                                                                  Resource creation Initiated
+2023-12-26 14:59:29.109000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1                                                                           Resource creation Initiated
+2023-12-26 14:59:29.036000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2                                                                           Resource creation Initiated
+2023-12-26 14:59:28.261000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBInstance        ArtifactoryDatabase
+2023-12-26 14:59:27.314000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1
+2023-12-26 14:59:27.207000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2
+2023-12-26 14:59:27.074000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG
+2023-12-26 14:59:26.024000+00:00  CREATE_COMPLETE     AWS::EFS::FileSystem        ArtifactoryEfsFileSystem
+2023-12-26 14:59:25.815000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG                                                                                Resource creation Initiated
+2023-12-26 14:59:23.478000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket             ArtifactoryS3Bucket                                                                                  Resource creation Initiated
+2023-12-26 14:59:23.014000+00:00  CREATE_COMPLETE     AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup
+2023-12-26 14:59:22.757000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup                                                                       Resource creation Initiated
+2023-12-26 14:59:22.349000+00:00  CREATE_IN_PROGRESS  AWS::EFS::FileSystem        ArtifactoryEfsFileSystem                                                                             Resource creation Initiated
+2023-12-26 14:59:21.072000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG
+2023-12-26 14:59:21.028000+00:00  CREATE_IN_PROGRESS  AWS::EFS::FileSystem        ArtifactoryEfsFileSystem
+2023-12-26 14:59:21.020000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup
+2023-12-26 14:59:21.006000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket             ArtifactoryS3Bucket
+2023-12-26 14:59:17.333000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [ArtifactoryLaunchConfiguration].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                           LogicalResourceId                                                                                   ResourceStatusReason
+--------------------------------  ------------------  -------------------------------------  --------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------
+2023-12-26 15:14:02.481000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X  The following resource(s) failed to create: [ArtifactoryLaunchConfiguration].
+2023-12-26 15:14:01.063000+00:00  CREATE_FAILED       AWS::AutoScaling::LaunchConfiguration  ArtifactoryLaunchConfiguration                                                                      Properties validation failed for resource ArtifactoryLaunchConfiguration with message:
+                                                                                                                                                                                                 #/UserData: expected maxLength: 21847, actual: 29524
+2023-12-26 15:14:00.299000+00:00  CREATE_IN_PROGRESS  AWS::AutoScaling::LaunchConfiguration  ArtifactoryLaunchConfiguration
+2023-12-26 15:13:56.423000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                                                                                    ResourceStatusReason
+--------------------------------  ------------------  --------------------------  ---------------------------------------------------------------------------------------------------  ---------------------------
+2023-12-26 15:12:41.021000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R
+2023-12-26 15:12:35.706000+00:00  CREATE_COMPLETE     AWS::RDS::DBInstance        ArtifactoryDatabase
+2023-12-26 15:00:45.608000+00:00  CREATE_COMPLETE     AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1
+2023-12-26 15:00:45.562000+00:00  CREATE_COMPLETE     AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2
+2023-12-26 15:00:08.056000+00:00  CREATE_COMPLETE     AWS::IAM::Policy            ArtifactoryS3IAMPolicy
+2023-12-26 14:59:52.338000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Policy            ArtifactoryS3IAMPolicy                                                                               Resource creation Initiated
+2023-12-26 14:59:50.973000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Policy            ArtifactoryS3IAMPolicy
+2023-12-26 14:59:48.696000+00:00  CREATE_COMPLETE     AWS::S3::Bucket             ArtifactoryS3Bucket
+2023-12-26 14:59:32.066000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBInstance        ArtifactoryDatabase                                                                                  Resource creation Initiated
+2023-12-26 14:59:29.109000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1                                                                           Resource creation Initiated
+2023-12-26 14:59:29.036000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2                                                                           Resource creation Initiated
+2023-12-26 14:59:28.261000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBInstance        ArtifactoryDatabase
+2023-12-26 14:59:27.314000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget1
+2023-12-26 14:59:27.207000+00:00  CREATE_IN_PROGRESS  AWS::EFS::MountTarget       ArtifactoryEfsMountTarget2
+2023-12-26 14:59:27.074000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG
+2023-12-26 14:59:26.024000+00:00  CREATE_COMPLETE     AWS::EFS::FileSystem        ArtifactoryEfsFileSystem
+2023-12-26 14:59:25.815000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG                                                                                Resource creation Initiated
+2023-12-26 14:59:23.478000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket             ArtifactoryS3Bucket                                                                                  Resource creation Initiated
+2023-12-26 14:59:23.014000+00:00  CREATE_COMPLETE     AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup
+2023-12-26 14:59:22.757000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup                                                                       Resource creation Initiated
+2023-12-26 14:59:22.349000+00:00  CREATE_IN_PROGRESS  AWS::EFS::FileSystem        ArtifactoryEfsFileSystem                                                                             Resource creation Initiated
+2023-12-26 14:59:21.072000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup     ArtifactoryDatabaseSG
+2023-12-26 14:59:21.028000+00:00  CREATE_IN_PROGRESS  AWS::EFS::FileSystem        ArtifactoryEfsFileSystem
+2023-12-26 14:59:21.020000+00:00  CREATE_IN_PROGRESS  AWS::RDS::DBSubnetGroup     ArtifactoryDatabaseSubnetGroup
+2023-12-26 14:59:21.006000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket             ArtifactoryS3Bucket
+2023-12-26 14:59:17.333000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVp-ArtifactoryCoreInfraStack-CI8YPIR9FJ0R  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [ArtifactoryLaunchConfiguration].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                           LogicalResourceId                                                                                   ResourceStatusReason
+--------------------------------  ------------------  -------------------------------------  --------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------
+2023-12-26 15:14:02.481000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X  The following resource(s) failed to create: [ArtifactoryLaunchConfiguration].
+2023-12-26 15:14:01.063000+00:00  CREATE_FAILED       AWS::AutoScaling::LaunchConfiguration  ArtifactoryLaunchConfiguration                                                                      Properties validation failed for resource ArtifactoryLaunchConfiguration with message:
+                                                                                                                                                                                                 #/UserData: expected maxLength: 21847, actual: 29524
+2023-12-26 15:14:00.299000+00:00  CREATE_IN_PROGRESS  AWS::AutoScaling::LaunchConfiguration  ArtifactoryLaunchConfiguration
+2023-12-26 15:13:56.423000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack             tCaT-jfrog-artifactory-ec2-xray-99186d-ArtifactoryExistingVpcStack-ArtifactoryPrimary-IXXOCFSU772X  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 26. December 2023 09:15AM
+-----------------------------------------------------------------------------
+
