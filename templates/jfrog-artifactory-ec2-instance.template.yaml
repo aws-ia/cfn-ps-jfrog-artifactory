@@ -403,7 +403,9 @@ Resources:
 
             mkdir ~/.jfrog_ami
 
-            aws s3 --region ${AWS::Region} sync s3://${QsS3BucketName}/${QsS3KeyPrefix}cloudInstallerScripts/ ~/.jfrog_ami/ || cfn_fail
+            wget https://${QsS3BucketName}.s3.${AWS::Region}.amazonaws.com/${QsS3KeyPrefix}cloudInstallerScripts.zip
+            unzip ./cloudInstallerScripts.zip
+            mv ./cloudInstallerScripts ~/.jfrog_ami
 
             setsebool httpd_can_network_connect 1 -P
 
