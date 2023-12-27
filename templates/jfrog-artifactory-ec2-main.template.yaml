@@ -8,9 +8,6 @@ Metadata:
         - W9006
       ignore_reasons:
         - E9101: "'master' is part of the product naming conventions for now"
-  QuickStartDocumentation:
-    EntrypointName: "Parameters for launching into a new VPC"
-    Order: "1"
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
@@ -519,7 +516,7 @@ Parameters:
     NoEcho: "true"
     Type: String
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-quickstart"]
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-ia"]
 
 Resources:
   ArtifactoryVpcStack:

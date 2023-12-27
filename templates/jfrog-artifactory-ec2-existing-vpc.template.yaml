@@ -8,9 +8,6 @@ Metadata:
         - W9006
       ignore_reasons:
         - E9101: "'master' is part of the product naming conventions for now"
-  QuickStartDocumentation:
-    EntrypointName: "Parameters for launching into an existing VPC"
-    Order: "2"
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
@@ -548,7 +545,7 @@ Conditions:
   EnableBastion: !Equals [!Ref "ProvisionBastionHost", "Enabled"]
   HasSecondaryNodes: !Not [!Equals [!Ref NumberOfSecondary, "0"]]
   DefaultJava: !Equals [!Ref DefaultJavaMemSettings, "true"]
-  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-quickstart"]
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, "aws-ia"]
   EnableXray: !Equals [!Ref InstallXray, "true"]
   SmCertNameNotExists: !Equals [!Ref "SmCertName", ""]
   SmCertNameExists: !Not [!Equals [!Ref "SmCertName", ""]]
@@ -924,7 +921,7 @@ Resources:
           - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QsS3KeyPrefix}
           - S3Bucket: !If
               - UsingDefaultBucket
-              - !Sub "aws-quickstart-${AWS::Region}"
+              - !Sub "aws-ia-${AWS::Region}"
               - !Ref "QsS3BucketName"
             S3Region: !If
               - UsingDefaultBucket
@@ -1010,7 +1007,7 @@ Resources:
           - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QsS3KeyPrefix}
           - S3Bucket: !If
               - UsingDefaultBucket
-              - !Sub "aws-quickstart-${AWS::Region}"
+              - !Sub "aws-ia-${AWS::Region}"
               - !Ref "QsS3BucketName"
             S3Region: !If
               - UsingDefaultBucket
@@ -1165,7 +1162,7 @@ Resources:
           - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QsS3KeyPrefix}
           - S3Bucket: !If
               - UsingDefaultBucket
-              - !Sub "aws-quickstart-${AWS::Region}"
+              - !Sub "aws-ia-${AWS::Region}"
               - !Ref "QsS3BucketName"
             S3Region: !If
               - UsingDefaultBucket
@@ -1220,7 +1217,7 @@ Resources:
           - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QsS3KeyPrefix}
           - S3Bucket: !If
               - UsingDefaultBucket
-              - !Sub "aws-quickstart-${AWS::Region}"
+              - !Sub "aws-ia-${AWS::Region}"
               - !Ref "QsS3BucketName"
             S3Region: !If
               - UsingDefaultBucket
