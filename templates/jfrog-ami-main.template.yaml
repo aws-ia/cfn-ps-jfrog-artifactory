@@ -97,7 +97,7 @@ Parameters:
     Description: The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.
     Type: String
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, 'aws-quickstart']
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, 'aws-ia']
 Resources:
   VPCStack:
     Type: AWS::CloudFormation::Stack

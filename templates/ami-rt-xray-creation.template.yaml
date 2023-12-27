@@ -116,7 +116,7 @@ Mappings:
     us-gov-west-1:
       AMI: "ami-bbba86da"
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, 'aws-quickstart']
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, 'aws-ia']
 Resources:
   JFrogAMIIamRole:
     Type: AWS::IAM::Role
