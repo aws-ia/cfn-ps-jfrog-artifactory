@@ -556,48 +556,6 @@ Conditions:
     ]
 
 Resources:
-  BastionRole:
-    Condition: EnableBastion
-    Type: "AWS::IAM::Role"
-    Metadata:
-      cfn-lint:
-        config:
-          ignore_checks:
-            - EIAMPolicyWildcardResource
-          ignore_reasons:
-            EIAMPolicyWildcardResource: EC2 ec2:Describe* , ec2:AssociateAddress API actions do not support resource-level permission
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: ec2.amazonaws.com
-            Action: sts:AssumeRole
-      Policies:
-        - PolicyName: QSBucketAccess
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action: s3:GetObject
-                Resource: !Sub "arn:${AWS::Partition}:s3:::${QsS3BucketName}/*"
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogStream
-                  - logs:GetLogEvents
-                  - logs:PutLogEvents
-                  - logs:DescribeLogGroups
-                  - logs:DescribeLogStreams
-                  - logs:PutRetentionPolicy
-                  - logs:PutMetricFilter
-                  - logs:CreateLogGroup
-                Resource: !Sub "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*:*"
-              - Effect: Allow
-                Action:
-                  - ec2:AssociateAddress
-                  - ec2:DescribeAddresses
-                Resource: "*"
   BastionStack:
     Condition: EnableBastion
     Type: AWS::CloudFormation::Stack
@@ -630,7 +588,6 @@ Resources:
         BastionAMIOS: !Ref BastionOs
         EnableTCPForwarding: !Ref BastionEnableTcpForwarding
         EnableX11Forwarding: !Ref BastionEnableX11Forwarding
-        AlternativeIAMRole: !Ref BastionRole
         NumBastionHosts: !Ref NumBastionHosts
 
   ArtifactoryCoreInfraStack:
